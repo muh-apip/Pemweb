@@ -1,0 +1,37 @@
+body {
+  background-color: #f8f9fa;
+}
+
+.container {
+  margin-top: 20px;
+}
+
+form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: 700;
+}
+
+textarea.form-control {
+  height: 100px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+button[type="submit"] {
+  width: 50%;
+  margin-left: 25%;
+  border-radius: 10px;
+}

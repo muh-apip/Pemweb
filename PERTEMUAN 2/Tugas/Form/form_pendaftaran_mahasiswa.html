@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Pendaftaran Mahasiswa Baru</title>
+    <!-- Panggil Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="container d-flex justify-content-center">
+      <div class="col-md-8">
+        <h2 class="text-center mt-2 mb-4">Pendaftaran Mahasiswa Baru</h2>
+        <form>
+          <div class="form-group">
+            <label for="npm">NPM (Nomor Pokok Mahasiswa)</label>
+            <input type="text" class="form-control" />
+          </div>
+          <div class="form-group">
+            <label for="nama">Nama Lengkap</label>
+            <input type="text" class="form-control" />
+          </div>
+          <div class="form-group">
+            <label for="alamat">Alamat</label>
+            <textarea class="form-control"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="jk">Jenis Kelamin</label><br />
+            <input type="radio" value="Laki-Laki" id="lakilaki" />
+            <label for="lakilaki">Laki-Laki</label><br />
+            <input type="radio" value="Perempuan" id="perempuan" />
+            <label for="perempuan">Perempuan</label><br />
+          </div>
+          <div class="form-group">
+            <label for="prodi">Program Studi</label>
+            <select id="prodi" class="form-control">
+              <option value="">Sistem Informasi</option>
+              <option value="">Informatika</option>
+              <option value="">Hukum</option>
+              <option value="">Teknik Mesin</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary mt-4 mb-2">
+            Tambah
+          </button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

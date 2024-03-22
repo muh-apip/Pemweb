@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalkulator</title>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css">
+    
+  </head>
+  <body>
+    <div class="container">
+      <div class="calculator col-md-6 mx-auto">
+        <h2 class="text-center mb-4">Kalkulator</h2>
+        <div class="form-group">
+          <input
+            type="number"
+            id="num1"
+            class="form-control"
+            placeholder="Masukkan angka pertama"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="number"
+            id="num2"
+            class="form-control"
+            placeholder="Masukkan angka kedua"
+          />
+        </div>
+        <div class="form-group">
+          <select id="operator" class="form-control">
+            <option value="tambah">+</option>
+            <option value="kurang">-</option>
+            <option value="kali">*</option>
+            <option value="bagi">/</option>
+            <option value="modulus">%</option>
+          </select>
+        </div>
+        <button onclick="calculate()" class="btn btn-primary btn-block">
+          Hitung
+        </button>
+        <p class="mt-3">Hasil: <span id="result"></span></p>
+      </div>
+    </div>
+
+    <script>
+      function calculate() {
+        var num1 = parseFloat(document.getElementById("num1").value);
+        var num2 = parseFloat(document.getElementById("num2").value);
+        var operator = document.getElementById("operator").value;
+        var result;
+
+        switch (operator) {
+          case "tambah":
+            result = num1 + num2;
+            break;
+          case "kurang":
+            result = num1 - num2;
+            break;
+          case "kali":
+            result = num1 * num2;
+            break;
+          case "bagi":
+            if (num2 !== 0) {
+              result = num1 / num2;
+            } else {
+              result = "Tidak dapat dibagi oleh 0";
+            }
+            break;
+          case "modulus":
+            if (num2 !== 0) {
+              result = num1 % num2;
+            } else {
+              result = "Tidak dapat menghitung modulus dengan 0";
+            }
+            break;
+          default:
+            result = "Operasi tidak valid";
+        }
+
+        document.getElementById("result").textContent = result;
+      }
+    </script>
+  </body>
+</html>

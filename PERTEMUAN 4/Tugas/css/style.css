@@ -1,0 +1,82 @@
+.apple-icon {
+  color: #0275d8;
+}
+
+.card {
+  margin-bottom: 5px;
+  margin-top: 20%;
+}
+
+h2 {
+  color: #0275d8;
+  margin-top: 100px;
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
+  padding: 0 11%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+form {
+  margin-bottom: 15%;
+}
+
+.img img {
+  width: 400px;
+}
+
+.text h2 {
+  font-size: 58px;
+  position: relative;
+}
+
+.text h2::after {
+  position: relative;
+  width: 20%;
+  height: 4px;
+  left: 0;
+  bottom: 2px;
+}
+
+.fixed-top {
+  position: fixed;
+  top: 0;
+  margin-bottom: 100px;
+  z-index: 1000;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:focus,
+.navbar-nav .nav-link:hover {
+  color: #0275d8 !important;
+}
+
+.card-img-top {
+  transition: transform 0.2s;
+}
+
+.card-img-top:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .navbar-nav {
+    flex-direction: column;
+  }
+  .nav-item {
+    margin-bottom: 10px;
+  }
+  .card {
+    margin-left: 20%;
+    margin-right: 10%;
+  }
+}
+
+.img .navbar {
+  background-color: #343a40; /* Atur latar belakang navbar */
+  color: #fff; /* Atur warna teks navbar */
+}
